@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgba(71, 61, 139, 0.907);
+}
+
+.container {
+    max-width: 1024px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.934);
+    color: aqua;
+    padding: 16px 0 0;
+    border-bottom: 1px solid aqua;
+    font-weight: bold;
+    margin-bottom: 36px;
+}
+
+.menu {
+    display: none;
+}
+
+.menu > li {
+    padding: 16px;
+    border-left: 4px solid transparent;
+    border-top: 4px solid transparent;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: aqua;
+}
+
+li {
+    list-style: none;
+}
+
+.menuButton {
+    margin-top: 16px;
+    padding-bottom: 16px;
+}
+
+.menuButton button {
+    padding: 8px;
+    font-weight: bold;
+    background-color: rgba(71, 61, 139, 0.508);
+    color: aqua;
+    border-color: rgba(0, 255, 255, 0.382);
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.submenu {
+    display: block;
+    position: relative;
+    width: 100%;
+    border: none;
+    left: 0;
+    top: 100%;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+.aboutStore div.container {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding: 16px;
+    border-bottom: 2px solid aqua;
+    margin-bottom: 36px;
+    color: aqua;
+    font-style: italic;
+}
+
+.gamesDisplay h3 {
+    font-size: 1.5em;
+    padding: 16px 0 0;
+    margin-bottom: 16px;
+    color: rgb(224, 234, 252);
+}
+
+#gamesSection > h3 {
+    font-size: 1.3em;
+    padding: 8px;
+    margin-bottom: 36px;
+    color: aqua;
+    border-left: 2px solid aqua;
+    border-top: 2px solid aqua;
+}
+
+p {
+    color: rgb(207, 224, 255);
+}
+
+.price {
+    color: rgb(181, 251, 251);
+    display: grid;
+    margin: 16px 0;
+    clear: both;
+    font-size: 22px;
+}
+
+.price del {
+    color: #ccccccdf;
+    font-size: 0.8em;
+}
+
+article {
+    border-bottom: 1px solid aqua;
+    margin-bottom: 36px;
+}
+
+article button {
+    width: 100%;
+    padding: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 36px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 640px) {
+    header div.container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .menuButton {
+        padding: 0;
+        margin: 0;
+    }
+
+    .menuButton button {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        width: 230px;
+        border: 1px solid darkslateblue;
+        background-color: rgb(30, 25, 59);
+    }
+
+    .menu > li {
+        float: left;
+        position: relative;
+    }
+
+    .clear{
+        clear: both;
+    }
+
+    .menu li:hover .submenu {
+        display: block;
+    }
+
+    .menu li:hover {
+        border-color: aqua;
+    }
+
+    .gamesOnSale, .gamesSection {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 2%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .aboutStore {
+        display: flex;
+    }
+
+    .aboutStore img {
+        width: 50%;
+        margin-right: 36px;
+    }
+    
+    .content {
+        display: grid;
+        grid-template-columns: 69.5% 29.5%;
+        column-gap: 1%;
+    }
+}
